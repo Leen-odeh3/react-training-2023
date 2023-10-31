@@ -6,3 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+a{
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color:#242424;
+}
