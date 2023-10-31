@@ -1,9 +1,10 @@
 import React from 'react'
+import Main from '../component/Main'
 
 const Js = () => {
   return (
     <div style={{height:"500px",textAlign:"center",fontSize:"30px",paddingTop:"86px"}}>
-    JS Page
+   <Main name="JS"/>
     </div>
   )
 }
