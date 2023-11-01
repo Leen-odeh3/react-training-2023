@@ -10,8 +10,8 @@ const Header = () => {
 
   const c= dark?'light':'dark';
   return (
-    <div  className={c}>
-     <Link to="/"><h1>Dev. </h1></Link>
+    <div  className={c} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"10px 40px"}}>
+     <Link to="/"><h1>Dev.</h1></Link>
      <button onClick={toggle}>Toggle</button>
      <div >
       <NavLink to="/html">HTML </NavLink>
