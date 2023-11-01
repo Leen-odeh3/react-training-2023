@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { ThemeContext } from '../Context/ThemeContext';
+import './Header.scss'
+
 
 const Header = () => {
+
+  const {dark,toggle}=useContext(ThemeContext);
+
+  const c= dark?'light':'dark';
   return (
-    <div style={{display:"flex",justifyContent:"space-between",
-    alignItems:"center",padding:"0px 50px",backgroundColor:"#242424",color:"white"}}>
+    <div  className={c}>
      <Link to="/"><h1>Dev. </h1></Link>
+     <button onClick={toggle}>Toggle</button>
      <div >
       <NavLink to="/html">HTML </NavLink>
       <NavLink to="/css" style={{margin:"0px 20px"}}>CSS </NavLink>

@@ -1,0 +1,23 @@
+div {
+
+
+
+    &.light {
+        a {
+            color: black;
+        }
+
+        background-color: rgb(253, 253, 253);
+
+    }
+
+    &.dark {
+        background-color: black;
+
+        a {
+            color: white;
+
+        }
+    }
+
+}
