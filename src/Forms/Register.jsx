@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/Config";
@@ -8,7 +8,7 @@ const Register = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [name, setname] = useState("");
-
+  const navigate = useNavigate();
   const { dark } = useContext(ThemeContext);
   const c = dark ? "light" : "dark";
   return (
@@ -36,11 +36,12 @@ const Register = () => {
       <button
         onClick={(e) => {
           e.preventDefault();
-          
+
           createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
               // Signed up
               const user = userCredential.user;
+              navigate("/login");
               // ...
             })
             .catch((error) => {

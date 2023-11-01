@@ -41,6 +41,7 @@ const Header = () => {
               CSS
             </NavLink>
             <NavLink to="/js"> JS</NavLink>
+            <NavLink to="/profile" style={{margin:"0px 10px"}}>Profile</NavLink>
             <NavLink to="/login" onClick={()=>{
               const auth = getAuth();
               navigate("/Login");

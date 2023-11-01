@@ -6,7 +6,7 @@ import Html from "../Pages/Html";
 import Js from "../Pages/Js";
 import Register from "../Forms/Register";
 import Login from "../Forms/Login";
-
+import Profile from '../Pages/Profile'
 
 const Routing = () => {
   return (
@@ -19,6 +19,8 @@ const Routing = () => {
           <Route path="/js" element={<Js/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/profile" element={<Profile/>} />
+
         </Route>
       </Routes>
     </BrowserRouter>
