@@ -10,7 +10,7 @@ const Usestate = () => {
   const color = theme === "dark" ? "light" : "dark";
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={`app ${color}`}>
       <p> My name is {name}</p>
       <button onClick={() => setname("leen")}>change</button>
       <p> My age is {age}</p>
