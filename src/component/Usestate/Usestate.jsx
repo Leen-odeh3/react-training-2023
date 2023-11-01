@@ -5,7 +5,10 @@ const Usestate = () => {
   const [age, setage] = useState(0);
   const [count, setcount] = useState(0);
 
-const [theme ,settheme]=useState("light");
+  const [theme, settheme] = useState("light");
+
+  const color = theme === "dark" ? "light" : "dark";
+
   return (
     <div className={`app ${theme}`}>
       <p> My name is {name}</p>
@@ -18,8 +21,10 @@ const [theme ,settheme]=useState("light");
         <button onClick={() => setcount(count - 1)}> -</button>
       </div>
 
-      <button onClick={()=>settheme('light')}>Light</button>
-      <button onClick={()=>settheme('dark')}>Dark</button>
+      <button onClick={() => settheme("light")}>Light</button>
+      <button onClick={() => settheme("dark")}>Dark</button>
+
+      <button onClick={() => settheme(`${color}`)}>Toggle</button>
     </div>
   );
 };
