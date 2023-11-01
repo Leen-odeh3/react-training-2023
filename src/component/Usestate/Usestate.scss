@@ -1,0 +1,27 @@
+div{
+    p{
+        margin-top: 0px;
+    }
+    &.app{
+        height: 100vh;
+        padding-top: 30px;
+    button{
+        width:150px;
+        height:50px;
+        background-color: #085185;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 5px 20px;
+        cursor: pointer;
+        border:none;
+    }
+    &.dark{
+        background-color: #242424;
+        color:white;
+    }
+    &.light{
+        background-color: white;
+        color:#242424;
+    } }
+}

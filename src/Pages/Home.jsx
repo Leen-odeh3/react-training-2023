@@ -5,9 +5,10 @@ import Usestate from "../component/Usestate/Usestate"
 
 const Home = () => {
   return (
-    <div style={{height:"500px",textAlign:"center",fontSize:"30px",paddingTop:"86px"}}>
+    <div>
       {/* <Main name="Home" /> */}
       <Usestate/>
+    
     </div>
   )
 }
