@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 import "./Header.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,6 +8,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 
 const Header = () => {
+  const navigate=useNavigate();
   const [user, loading, error] = useAuthState(auth);
   const { dark, toggle } = useContext(ThemeContext);
 
@@ -37,11 +38,12 @@ const Header = () => {
           <>
             <NavLink to="/html">HTML </NavLink>
             <NavLink to="/css" style={{ margin: "0px 20px" }}>
-              CSS{" "}
+              CSS
             </NavLink>
             <NavLink to="/js"> JS</NavLink>
-            <NavLink to="/js" onClick={()=>{
+            <NavLink to="/login" onClick={()=>{
               const auth = getAuth();
+              navigate("/Login");
               signOut(auth).then(() => {
                 // Sign-out successful.
               }).catch((error) => {
