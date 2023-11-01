@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/Config";
+import { updateProfile } from "firebase/auth";
+
 
 const Register = () => {
   const [email, setemail] = useState("");
@@ -41,6 +43,12 @@ const Register = () => {
             .then((userCredential) => {
               // Signed up
               const user = userCredential.user;
+
+updateProfile(auth.currentUser, {
+ displayName :name
+}).then(() => {
+}).catch((error) => {
+});
               navigate("/login");
               // ...
             })
