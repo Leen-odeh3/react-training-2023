@@ -34,7 +34,9 @@ const Register = () => {
         onChange={(e) => setpassword(e.target.value)}
       />
       <button
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
+          
           createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
               // Signed up
